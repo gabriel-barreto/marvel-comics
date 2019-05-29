@@ -1,0 +1,70 @@
+.comic {
+    align-items: center;
+    display: flex;
+    height: 24rem;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.comic > .cover {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    transition: filter 400ms;
+    width: auto;
+    will-change: filter;
+}
+
+.comic > .overlay {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: overlay;
+    border: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    outline-color: var(--primary);
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: opacity 400ms;
+    width: 100%;
+    will-change: opacity;
+    z-index: 9;
+}
+
+.comic > .overlay > p {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.comic > .overlay > p:first-of-type {
+    align-items: center;
+    display: flex;
+    color: #212121;
+    display: flex;
+    font-size: 40px;
+    height: 54px;
+    justify-content: center;
+    width: 54px;
+}
+
+.comic > .overlay > p:last-of-type {
+    font-size: 18px;
+    line-height: 140%;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+.comic:hover > .cover {
+    filter: blur(3px);
+}
+
+.comic:hover > .overlay {
+    opacity: 1;
+}

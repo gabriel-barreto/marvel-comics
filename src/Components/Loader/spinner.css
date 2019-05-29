@@ -1,0 +1,25 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+    border-color: rgba(237, 029, 36, 0.24);
+    border-left-color: #ed1d24;
+    border-radius: 50%;
+    border-style: solid;
+    opacity: 0;
+    transition: opacity 400ms, visibility 400ms;
+    visibility: hidden;
+    will-change: transform, opacity, visibility;
+}
+
+.spinner.-active {
+    opacity: 1;
+    visibility: visible;
+}

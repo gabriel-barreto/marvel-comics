@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import Reactotron from "reactotron-react-js";
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import Home from "./Containers/Home";
 
 function App() {
-    useEffect(() => {
-        setTimeout(() => {
-            Reactotron.log(process.env);
-            Reactotron.log(process.env.REACT_APP_MARVEL_ACCESS_KEY);
-            Reactotron.log(process.env.REACT_APP_MARVEL_SECRET_KEY);
-        }, 3000);
-    }, []);
-
-    return <div className="App">Hello World!</div>;
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" component={Home} />
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;

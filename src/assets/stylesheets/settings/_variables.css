@@ -1,0 +1,8 @@
+:root {
+    /* ==> Default margins */
+    --navbarMargin: 9.6rem;
+
+    /*  ==> Colors */
+    --primary: #ed1d24;
+    --primaryDark: #970c0c;
+}

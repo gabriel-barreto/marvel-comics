@@ -1,0 +1,106 @@
+.featured-comic {
+    background-size: cover;
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    height: 30rem;
+    position: relative;
+    transition: box-shadow 400ms;
+    width: 50rem;
+    will-change: box-shadow;
+}
+
+.featured-comic::after {
+    background-color: var(--primary);
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    content: "Clique para ver mais!";
+    display: block;
+    font-size: 1.2rem;
+    bottom: -12px;
+    opacity: 0;
+    padding: 0.8rem 1rem;
+    position: absolute;
+    right: -12px;
+    text-transform: uppercase;
+    transform: translate(10px, 10px);
+    transition: opacity 400ms, transform 400ms;
+    will-change: opacity, transform;
+    z-index: 1;
+}
+
+.featured-comic:hover {
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.48);
+}
+
+.featured-comic:hover::after {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.featured-comic > .background,
+.featured-comic > .wrapper {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.featured-comic > .background {
+    background-color: rgba(255, 255, 255, 1);
+    background-blend-mode: screen;
+    filter: blur(2px);
+}
+
+.featured-comic > .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 1.6rem;
+    padding: 1.6rem;
+}
+
+.featured-comic > .wrapper > .cover {
+    border-radius: 1px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.32);
+    height: auto;
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+}
+
+.featured-comic > .wrapper .title {
+    color: #212121;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 0.8rem;
+}
+
+.featured-comic > .wrapper > .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0.2rem 0;
+}
+
+.featured-comic > .wrapper .publish-date {
+    color: rgba(33, 33, 33, 0.8);
+    font-size: 1.4rem;
+    line-height: 140%;
+}
+
+.featured-comic > .wrapper .authors {
+    align-self: flex-end;
+    color: rgba(33, 33, 33, 0.8);
+}
+
+.featured-comic .authors > p:first-of-type {
+    margin-bottom: 0.2rem;
+}
+
+.featured-comic .authors > p {
+    font-size: 1.4rem;
+    line-height: 148%;
+}

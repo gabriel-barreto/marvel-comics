@@ -1,0 +1,25 @@
+.loader {
+    align-items: center;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.88);
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transform: translateY(-100vh);
+    transition: transform 400ms;
+    width: 100%;
+    will-change: transform;
+}
+
+.loader > .alt {
+    margin-top: 2.4rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.loader.-active {
+    transform: translateY(0);
+}
