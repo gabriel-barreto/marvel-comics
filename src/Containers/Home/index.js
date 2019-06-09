@@ -44,7 +44,7 @@ const Home = ({
     return (
         <Fragment>
             <Navbar />
-            <Grid>
+            <Grid year={year}>
                 {comics.length > 0
                     ? comics.map(each => (
                           <Comic
