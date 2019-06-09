@@ -5,6 +5,13 @@ import "./comic.css";
 
 const Comic = ({ title, src, onClick }) => (
     <div className="comic" onClick={onClick}>
+        <div
+            className="background"
+            style={{
+                background: `url(${src}), rgba(0, 0, 0, 0.8)`,
+                backgroundPosition: "center",
+            }}
+        />
         <img className="cover" alt={title} src={src} title={title} />
         <button className="overlay">
             <p>+</p>
