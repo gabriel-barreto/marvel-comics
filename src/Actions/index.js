@@ -20,3 +20,17 @@ export const yearsSetAvaible = availableYears => ({
     type: ActionTypes.years.SET_AVAILABLE,
     availableYears,
 });
+
+export default {
+    loadingOn,
+    loadingOff,
+    loadingToggle,
+    comicsAdd,
+    comicsClean,
+    resetPage,
+    setPage,
+    setTotal,
+    setItemsPerPage,
+    yearsSet,
+    yearsSetAvaible,
+};
