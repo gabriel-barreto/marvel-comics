@@ -1,7 +1,7 @@
 import axios from "axios";
 import apiKey from "./apiKey.service";
 
-import { Store } from "../index";
+import Store from "../store";
 import { loadingOn, loadingOff } from "../Actions";
 
 const $http = axios.create({

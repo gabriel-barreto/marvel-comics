@@ -1,15 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+
+import Store from "./store";
 
 import * as serviceWorker from "./serviceWorker";
-import Reducers from "./Reducers";
 import App from "./App";
 
 import "../src/assets/stylesheets/main.sass";
-
-const store = createStore(Reducers);
 
 if (process.env.NODE_ENV !== "production") {
     import("reactotron-react-js").then(({ default: Reactotron }) => {
@@ -18,7 +16,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={Store}>
         <App />
     </Provider>,
     document.getElementById("root")
