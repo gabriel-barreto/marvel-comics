@@ -7,7 +7,7 @@
         "axios": "^0.18.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
-        "react-redux": "^7.0.3",
+        "react-redux": "^7.1.0-rc.1",
         "react-router-dom": "^5.0.0",
         "react-scripts": "3.0.1",
         "redux": "^4.0.1"
@@ -36,13 +36,24 @@
         ]
     },
     "devDependencies": {
-        "node-sass": "^4.12.0",
-        "reactotron-react-js": "^3.2.3",
-        "@storybook/react": "^5.0.11",
+        "@babel/core": "^7.4.5",
         "@storybook/addon-actions": "^5.0.11",
         "@storybook/addon-links": "^5.0.11",
         "@storybook/addons": "^5.0.11",
-        "@babel/core": "^7.4.5",
-        "babel-loader": "8.0.5"
+        "@storybook/react": "^5.0.11",
+        "babel-loader": "8.0.5",
+        "chai": "^4.2.0",
+        "eslint": "^5.16.0",
+        "eslint-config-prettier": "^4.3.0",
+        "eslint-plugin-chai-expect": "^2.0.1",
+        "eslint-plugin-jest": "^22.6.4",
+        "eslint-plugin-prettier": "^3.1.0",
+        "eslint-plugin-react": "^7.13.0",
+        "moxios": "^0.4.0",
+        "node-sass": "^4.12.0",
+        "prettier": "^1.18.2",
+        "reactotron-react-js": "^3.2.3",
+        "sinon": "^7.3.2",
+        "sinon-chai": "^3.3.0"
     }
 }
