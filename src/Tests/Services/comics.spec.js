@@ -13,15 +13,15 @@ describe('Comics Service', () => {
             expect($comics).to.exist
             expect($comics).to.be.an.instanceOf(Object)
         })
-    });
 
-    describe('should have a fetch comics by year method', () => {
-        expect($comics.fetch).to.exist;
-        expect($comics.fetch).to.be.an.instanceOf(Function);
-    });
+        it('should have a fetch comics by year method', () => {
+            expect($comics.fetch).to.exist
+            expect($comics.fetch).to.be.an.instanceOf(Function)
+        })
 
-    describe('should have a fetch available years method', () => {
-        expect($comics.fetchAvailableYears).to.exist;
-        expect($comics.fetchAvailableYears).to.be.an.instanceOf(Function);
-    });
+        it('should have a fetch available years method', () => {
+            expect($comics.fetchAvailableYears).to.exist
+            expect($comics.fetchAvailableYears).to.be.an.instanceOf(Function)
+        })
+    })
 })
