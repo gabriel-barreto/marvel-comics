@@ -23,5 +23,3 @@ ReactDOM.render(
 );
 
 serviceWorker.unregister();
-
-export const Store = store;
